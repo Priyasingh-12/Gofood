@@ -1,0 +1,57 @@
+.logo{
+margin-top: 17px;
+margin-left: 20px;
+}
+nav{
+    background-color:rgb(140, 96, 174);
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+nav ul {
+    margin-top: 10px;
+    float: right;
+    margin-right: 90px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+    text-align: center;
+    justify-content: center;
+
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: larger;
+    font-weight: 600;
+    padding: 8px 20px;
+    transition: .5s;
+}
+ul li a:hover{
+    color: #0ef;
+}
+ul li a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:purple;
+    width: 100%;
+    z-index: -1;
+    border-bottom: 3px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    transition: .5s;
+    opacity: 0;
+}ul li a:hover span {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+
+}
