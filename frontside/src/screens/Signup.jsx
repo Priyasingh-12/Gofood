@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "./signup.css";
 
 const Signup = () => {
@@ -11,6 +11,8 @@ const Signup = () => {
   const [users,setUsers] = useState({
      email: "", password: ""
    })
+
+   let navigate = useNavigate();
 
   const [formPositions, setFormPositions] = useState({
     loginLeft: "50px",
@@ -55,7 +57,7 @@ name:credentials.name,email:credentials.email,password:credentials.password,loca
     const eventSubmit = async(e) => {
       e.preventDefault();
       
-      const res = await fetch("http://localhost:8000/api/createuser", {
+      const res = await fetch("http://localhost:8000/api/loginuser", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -70,6 +72,12 @@ email:users.email, password:users.password
   
   if(!data.success){
     setUsers("Enter valid Creds");
+  }
+
+  if(data.success){
+    localStorage.setItem("authToken".json.authToken);
+    console.log(localStorage.getItem("authToken"));
+    navigate("/home");
   }
     }
 // ==============================

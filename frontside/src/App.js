@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
     <Navbar/>
     <Routes>
-     <Route exact path="/" element= {<Home/>}/>
+     <Route exact path="/home" element= {<Home/>}/>
     <Route path='/createuser' element= {<Signup/>}/>
 
     </Routes>
