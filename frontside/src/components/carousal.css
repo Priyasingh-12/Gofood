@@ -1,11 +1,13 @@
 #carousel{
     max-height: 500px;
 }
-#btns{
-    background-color:rgb(140, 96, 174) ;
+.btns{
+    background-color:rgb(22, 77, 22) ;
     color: white;
+    height: 50px;
+    width: 60px;
 }
-#btns:hover{
+.btns:hover{
     background-color: aqua;
     color: black;
 }

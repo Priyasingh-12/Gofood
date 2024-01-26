@@ -10,10 +10,22 @@ const mongoDB = async () => {
         });
 
         console.log(`connection successful`);
+             
+         // Fetch data from "food_items" collection
+         const foodItemsCollection = await mongoose.connection.db.collection("food_items");
+         const foodItemsData = await foodItemsCollection.find({}).toArray();
+ 
+         // Fetch data from "foodCategory" collection
+         const foodCategoryCollection = await mongoose.connection.db.collection("foodCategory");
+         const foodCategoryData = await foodCategoryCollection.find({}).toArray();
+ 
+               // Set global variables with fetched data
+        global.food_items = foodItemsData;
+        global.foodCategory = foodCategoryData;
 
-        const fetched_data = mongoose.connection.db.collection("food_items");
-        const data =  await fetched_data.find({}).toArray() 
-            console.log();
+        console.log(global.food_items);
+        console.log(global.foodCategory);
+      
 
     } catch (err) {
         console.log(`no connection`, err);

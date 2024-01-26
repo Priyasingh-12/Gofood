@@ -5,7 +5,7 @@ const Carousal = () => {
 
   return (
     <>
-      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{objectFit:"contain !important"}}>
+      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel"style={{objectFit:"contain !important"}}>
         <div className="carousel-inner" id="carousel">
           <div className="carousel-caption" style={{zIndex:"10"}}>
             <form className="d-flex">
@@ -24,7 +24,7 @@ const Carousal = () => {
 
           <div className="carousel-item active">
             <img
-              src="https://www.fnp.com/images/pr/l/v20221130174933/rose-paradise-chocolate-cake-half-kg_1.jpg"
+              src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?w=740&t=st=1706080589~exp=1706081189~hmac=b517abd3f480668bca6240a0812aee48afc41d8c3deb29ef3e0f1ddfaad9727a"
               classNameNameName="d-block w-100"
               alt="cake"
               width="1600" height="900"
@@ -33,7 +33,7 @@ const Carousal = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41L12hLwO2L._AC_UF1000,1000_QL80_.jpg  "
+              src="https://www.shutterstock.com/shutterstock/photos/1938676873/display_1500/stock-photo-two-delicious-homemade-burgers-of-beef-cheese-and-vegetables-on-an-old-wooden-table-fat-unhealthy-1938676873.jpg  "
               classNameName="d-block w-100"
               alt="cake"
               width="1600" height="900"
@@ -42,7 +42,7 @@ const Carousal = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://www.cakesquarechennaionline.com/wp-content/uploads/2023/08/Punchy-Chocolate-truffle-cake.jpg"
+              src="https://media.istockphoto.com/id/839958568/photo/dim-sum.jpg?s=2048x2048&w=is&k=20&c=7w0W-WauMTacz2nJmKkYVw50LqQvxxDFLLtt0hpBrCc="
               classNameName="d-block w-100"
               alt="cake"
               width="1600" height="900"

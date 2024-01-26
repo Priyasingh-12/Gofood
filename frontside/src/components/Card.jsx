@@ -1,16 +1,23 @@
-const Card = () => {
+import React from "react";
+
+
+const Card = (props) => {
+  let options = props.options;
+  let priceOptions = Object.keys(options);
+
   return (
+
     <>
-      <div>
-        <div class="card" style={{ width: "18rem" }}>
-          <img src="https://images.unsplash.com/photo-1611497406092-4bc22c54b322?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVuZHQlMjBjYWtlfGVufDB8fDB8fHww" class="card-img-top" alt="bun" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some important</p>
+      <div >
+        <div className="card mt-3" style={{ "width": "18rem", "maxHeight":"360px"  }}>
+        <img src={props.ImgSrc} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill" }} />
+          <div className="card-body"   style={{ background: "#202225", color:"white" ,borderRadius: "5px" }}>
+            <h5 className="card-title">{props.foodName}</h5>
+            <p className="card-text">Some important</p>
             <div className="container w-100">
               <select
                 className="m-2 h-100 "
-                style={{ background: "rgb(207, 91, 182)", borderRadius: "5px" }}
+                style={{ background: "rgb(22, 77, 22)", borderRadius: "5px" ,color:"white" }}
               >
                 {Array.from(Array(7), (e, i) => {
                   return (
@@ -23,10 +30,11 @@ const Card = () => {
 
               <select
                 className="m-2 h-100 "
-                style={{ background: "rgb(207, 91, 182)", borderRadius: "5px" }}
+                style={{ background: "rgb(22, 77, 22)", borderRadius: "5px",color:"white" }}
               >
-                <option value="half">Half</option>
-                <option value="half">Half</option>
+                {priceOptions.map((data) => {
+                return <option key={data} value={data}>{data}</option>
+              })}
               </select>
 
               <div className="d-inline h-100 fs-5">Total Price</div>
